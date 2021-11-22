@@ -24,7 +24,7 @@
 .container {
     width: 100%;
     height: 110vh;
-    background-image: url(Futbol/fallback.jpg);
+    background-image: url(fallback.jpg);
     background-size: cover;
     background-position: center;
     display: flex;
@@ -294,7 +294,7 @@ nav ul li a{
 .container2 {
     width: 100%;
     height: 2280px;
-    background-image: url(Futbol/img-players/background.jpg);
+    background-image: url(img-players/background.jpg);
     background-size: cover;
     background-position: center;
     display: flex;
@@ -541,7 +541,7 @@ nav ul li a{
 /*------------------------------------------- FOOTER -----------------------------------------------*/
 
 footer .container4{
-    background-image: url(Futbol/1.jpg);
+    background-image: url(1.jpg);
     width: 100%;
     height: 520px;
     background-size: cover;
