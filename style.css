@@ -6,6 +6,7 @@
 
 :root{
     --azul:#041181;
+    --verde:#22E3C2;
 }
 
 
@@ -35,7 +36,7 @@ nav{
 	display: flex;
 	width: 100%;
 	align-items:flex-start;
-	flex-wrap: wrap;
+	
 	padding: 5px 0;
 }
 
@@ -105,7 +106,7 @@ nav ul li a{
 .grid {
 	overflow: hidden;
 	position: relative;   
-    border: 2px solid #22E3C2;  
+    border: 2px solid var(--verde);  
     cursor: pointer; 
 
 }
@@ -265,7 +266,7 @@ nav ul li a{
     width: 100%;
     height: 100%;
     padding: 0 1.87em;
-    color: #22E3C2;
+    color: var(--verde);
     cursor: pointer;    
     -webkit-transition: all 1s ease;
     -o-transition: all 1s ease;
@@ -281,7 +282,7 @@ nav ul li a{
 
 
 .grid .button:hover{
-    background: #22E3C2;
+    background: var(--verde);
     color: #fff;
 }
 
@@ -311,36 +312,81 @@ nav ul li a{
     flex-direction: column;
 }
 
-.container-de-container .carousel, .campeones, .goleadores{
+
+.container-de-container .videos-contenedor, .campeones, .goleadores{
     display: flex;    
     width: 90%;
-    justify-content: flex-start;
-    background-color: rgba(4,17,129,.7);
+    color: #fff;
 }
 
-.carousel{
+.videos-contenedor {
+    flex-direction: column;
+    font-size: 1.4rem;
+    padding: 35px 15px;
+}
+
+
+.videos-contenedor .contenedor-principal .flecha-izquierda, /*---------------Flechas--------------------*/
+.videos-contenedor .contenedor-principal .flecha-derecha{
+	position: absolute;
+	border: none;
+	background: rgba(0, 0, 0, 0);
+	font-size: 35px;
+	height: 50%;
+	top: calc(50%-33%);	/*50% del tamaño del contenedor -25% que es el alto del botón*/
+	line-height: 40px;
+	width: 50px;
+	color: var(--verde);
+	cursor: pointer;
+	z-index: 500;
+}
+
+/*---------------Flechas--------------------*/
+
+.videos-contenedor .contenedor-principal .flecha-izquierda{ 
+	left: -50px;
+}
+.videos-contenedor .contenedor-principal .flecha-derecha{
+	right: -50px;
+}
+
+/*------------------------------------------- CAROUSEL ----------------------------------------------------*/
+
+.videos-contenedor .contenedor-principal {
+	display: flex;
+	align-items: center;
+    position: relative;
+    margin-top: 5%;
+    width: 100%;
+}
+
+.videos-contenedor{
     margin-top: 40px;
-    height: 400px;
+    height: 220px;
+}
+.videos-contenedor .contenedor-carousel {
+	width: 100%;	
+	overflow:hidden;
+	scroll-behavior: smooth;
+}
+
+.videos-contenedor .contenedor-carousel .carousel{
+	display: flex;
+	flex-wrap: nowrap;
+}
+
+.videos-contenedor .contenedor-carousel .carousel .video{
+	min-width: 33%;
+	transition: .3s ease all;
+	box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.videos-contenedor .contenedor-carousel .carousel .video img{
+	width: 98%;
+	vertical-align: top;
+	height: 100%;
+}
 
 
 
@@ -351,6 +397,7 @@ nav ul li a{
     margin-top: 180px;
     font-family: "Champions-Regular";
     font-size: 1.4rem;
+    background-color: rgba(4,17,129,.7);
     color: #fff;
 
 }
@@ -374,7 +421,6 @@ nav ul li a{
         display: flex;
         overflow:hidden;
         position: relative;   
-
         cursor: pointer; 
         width: 100%;
         align-items: center;
@@ -443,6 +489,7 @@ nav ul li a{
         margin-top: 180px;
         font-family: "Champions-Regular";
         color: #fff;
+        background-color: rgba(4,17,129,.7);
         font-size: 1.4em;
     }
 
@@ -513,7 +560,7 @@ nav ul li a{
     
         .grid-jpg{
             width: 50%;
-            height: 100%;
+
             display: flex;
             align-items: center;
         }
@@ -542,34 +589,204 @@ nav ul li a{
 
 footer .container4{
     background-image: url(1.jpg);
+    height: 100%;
     width: 100%;
     height: 520px;
     background-size: cover;
     background-position: center;
     display: flex;
     position: relative;
-    justify-content: center;
     align-items: center;
     flex-direction: column;
 }
 
-footer .container4  img {
-    position: absolute;
-    margin-bottom: 20%;
-    max-width: 25%;
-    max-height: 35%;
-}
 
 
 .caja-texto{
     display: flex;
     width: 100%;
-    height: 40%;
-    margin-top: 5%;
+    height: 100%;
     justify-content: center;
     text-align: center;
     align-items: center;
     color: #ccc;
 }
+.container4  img {
+    position: absolute;
+    max-width: 25%;
+    max-height: 35%;
+}
 
 
+
+
+
+
+/*-----------------------------------------------RESPONSIVE DESIGN ------------------------------------------------*/
+@media screen and (max-width: 1000px){
+    .container{
+        height: 190vh;
+        background-image: url(fondo-responsive.jpg);
+    }
+
+    .nav{
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+    .nav img{
+        margin: auto;
+    }
+    nav ul{
+        padding-right: 0px;
+    }
+    nav ul li{
+        margin: 54px 20px;
+    }
+    
+    .text-box{
+        top: 13%;
+    }
+
+    .grid-section{
+        grid-template-rows: repeat(3, 29%);
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: 10%;
+        grid-gap: 15px;  
+        padding: 15px;        
+    }
+    .grid p{
+        font-size: 0.8em;
+    }
+    /*------------------- MATCH3 -------------------------*/
+    .grid:nth-child(7){
+	    grid-row:3/4;
+        grid-column: 1/2;
+    }
+    .grid:nth-child(8){
+	    grid-row:3/4;
+        grid-column: 1/2;
+    }
+    .grid:nth-child(9){
+	    grid-row:3/4;
+        grid-column: 1/2;
+    }
+
+    /*------------------- MATCH6 -------------------------*/
+    .grid:nth-child(16){
+	    grid-row:3/4;
+        grid-column: 2/3;
+    }
+    .grid:nth-child(17){
+	    grid-row:3/4;
+        grid-column: 2/3;
+    }
+    .grid:nth-child(18){
+	    grid-row:3/4;
+        grid-column: 2/3;
+    }
+
+    /*-------------BUTTON MORE---------------*/
+    .grid:nth-child(19){
+        grid-row: 4/5;
+        grid-column: 1/3;
+        width: 50%;
+        height: 70%;
+        margin-left: 25%;
+    }
+
+    .container2{
+        height: 2030px;
+        align-items: flex-start;
+    }
+    .container-de-container{
+        width: 98%;
+    }
+    
+    .container-de-container .videos-contenedor{
+        width: 100%;
+        padding: 5px 10px;
+        
+    }
+    .videos-contenedor .contenedor-carousel .carousel .video{
+        min-width: 100%;
+}
+    .videos-contenedor .contenedor-principal .flecha-izquierda, /*---------------Flechas--------------------*/
+    .videos-contenedor .contenedor-principal .flecha-derecha{
+        display: none;
+}
+
+    .campeones, .goleadores{
+        width: 100%;
+    }
+}
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 750px){
+    .head-to-head{
+        top: 10%;
+    }
+    .container{
+        height: 300vh;
+    }
+    .grid-section{
+        grid-template-rows: repeat(6, 15%);
+        grid-template-columns: repeat(1, 1fr);
+        grid-auto-rows: 10%;
+        grid-gap: 15px;  
+        padding: 15px;        
+    }
+    /*------------------- MATCH2 -------------------------*/
+    .grid:nth-child(4){
+	    grid-row:4/5;
+        grid-column: 1/2;
+    }
+    .grid:nth-child(5){
+	    grid-row:4/5;
+        grid-column:1/2;
+    }
+    .grid:nth-child(6){
+	    grid-row:4/5;
+        grid-column: 1/2;
+    }
+    /*------------------- MATCH5 -------------------------*/
+    .grid:nth-child(13){
+	    grid-row:5/6;
+        grid-column: 1/2;
+    }
+    .grid:nth-child(14){
+	    grid-row:5/6;
+        grid-column: 1/2;
+    }
+    .grid:nth-child(15){
+	    grid-row:5/6;
+        grid-column: 1/2;
+    }
+    /*------------------- MATCH6 -------------------------*/
+    .grid:nth-child(16){
+	    grid-row:6/7;
+        grid-column: 1/2;
+    }
+    .grid:nth-child(17){
+	    grid-row:6/7;
+        grid-column: 1/2;
+    }
+    .grid:nth-child(18){
+	    grid-row:6/7;
+        grid-column: 1/2;
+    }
+    /*-------------BUTTON MORE---------------*/
+    .grid:nth-child(19){
+        grid-row: 7/8;
+        grid-column: 1/2;
+        width: 50%;
+        height: 40%;
+    }
+}
