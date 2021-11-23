@@ -745,8 +745,11 @@ footer .container4{
         
     }
     .videos-contenedor .contenedor-carousel .carousel .video{
-        min-width: 100%;
+        min-width: 50%;
 }
+    .videos-contenedor .contenedor-carousel .carousel .video img{
+        height: 100%;
+    }
     .videos-contenedor .contenedor-principal .flecha-izquierda, /*---------------Flechas--------------------*/
     .videos-contenedor .contenedor-principal .flecha-derecha{
         display: none;
@@ -863,5 +866,11 @@ footer .container4{
     }
     .side-bar{
      margin-left: 25%;        
+    }
+	.videos-contenedor .contenedor-carousel .carousel .video{
+        min-width: 100%;
+}
+    .videos-contenedor .contenedor-carousel .carousel .video img{
+        height: 100%;
     }
 }
