@@ -35,8 +35,7 @@
 nav{
 	display: flex;
 	width: 100%;
-	align-items:flex-start;
-	
+	align-items:flex-start;	
 	padding: 5px 0;
 }
 
@@ -358,27 +357,34 @@ nav ul li a{
     position: relative;
     margin-top: 5%;
     width: 100%;
+    height: 300px;
 }
 
 .videos-contenedor{
     margin-top: 40px;
     height: 220px;
+    
 }
 .videos-contenedor .contenedor-carousel {
 	width: 100%;	
-	overflow:hidden;
 	scroll-behavior: smooth;
+    overflow: hidden;
 }
 
 .videos-contenedor .contenedor-carousel .carousel{
 	display: flex;
 	flex-wrap: nowrap;
+    
 }
 
 .videos-contenedor .contenedor-carousel .carousel .video{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 	min-width: 33%;
 	transition: .3s ease all;
 	box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+    
 }
 
 
@@ -390,6 +396,8 @@ nav ul li a{
 
 
 
+
+/*----------------------------------------------- CAMPEONES ------------------------------------------------------------------------------*/
 
 
 .campeones{
@@ -560,8 +568,7 @@ nav ul li a{
     
         .grid-jpg{
             width: 50%;
-
-            display: flex;
+            display: flex;           
             align-items: center;
         }
         .grid-jpg img{
@@ -586,18 +593,20 @@ nav ul li a{
 
 
 /*------------------------------------------- FOOTER -----------------------------------------------*/
-
+footer{
+    height: 600px;
+}
 footer .container4{
     background-image: url(1.jpg);
-    height: 100%;
     width: 100%;
-    height: 520px;
+    height: 100%;
     background-size: cover;
     background-position: center;
     display: flex;
-    position: relative;
+    position: absolute;
     align-items: center;
     flex-direction: column;
+    justify-content: center;
 }
 
 
@@ -608,13 +617,39 @@ footer .container4{
     height: 100%;
     justify-content: center;
     text-align: center;
-    align-items: center;
     color: #ccc;
 }
+.caja-texto p{
+    position: relative;
+    margin-top: 5%;
+}
 .container4  img {
-    position: absolute;
+    position: relative;
     max-width: 25%;
     max-height: 35%;
+}
+
+.side-bar{
+	width: 20%;
+	height: 30px;
+	position: absolute;
+    left: 10px;
+    top: 35%;
+}
+
+.social-links img{
+	margin: 5px;
+	cursor: pointer;
+    width: 32px;
+    height: 32px;
+}
+.social-links{
+    display: flex;
+    flex-direction: row;    
+	color: #fff;
+	text-align: center;
+    align-items: center;
+	position: absolute;
 }
 
 
@@ -645,7 +680,7 @@ footer .container4{
     }
     
     .text-box{
-        top: 13%;
+        top: 17%;
     }
 
     .grid-section{
@@ -653,7 +688,8 @@ footer .container4{
         grid-template-columns: repeat(2, 1fr);
         grid-auto-rows: 10%;
         grid-gap: 15px;  
-        padding: 15px;        
+        padding: 15px;   
+        border-bottom: none;       
     }
     .grid p{
         font-size: 0.8em;
@@ -719,6 +755,39 @@ footer .container4{
     .campeones, .goleadores{
         width: 100%;
     }
+
+    /*CAMPEONES RESPONSIVE*/
+    .grid2 .t1, 
+    .grid2 .t2,
+    .grid2 .t3,
+    .grid2 .t4{
+        margin-left: 80%;
+    }
+    .grid2 .t1 img, .grid2 .t2 img, .grid2 .t3 img, .grid2 .t4 img{
+        padding-left:10px;
+    }
+
+    /*JUGADORES RESPONSIVE*/
+    .grid-jpg{
+        width: 70%; 
+        height: 100%;        
+    }
+    .grid-jpg img{
+        object-fit:fill;
+        min-width: 72px;
+        min-height: 72px;
+    }
+
+    /*-----------------  FOOTER  ------------------------*/
+    .container4{
+        padding:3% 0px;
+    }
+    .side-bar{    
+        top: 80%;
+        margin-left: 35%;
+        
+    }
+
 }
 
 
@@ -735,6 +804,9 @@ footer .container4{
     }
     .container{
         height: 300vh;
+    }
+    .text-box{
+        top: 12%;
     }
     .grid-section{
         grid-template-rows: repeat(6, 15%);
@@ -788,5 +860,8 @@ footer .container4{
         grid-column: 1/2;
         width: 50%;
         height: 40%;
+    }
+    .side-bar{
+     margin-left: 25%;        
     }
 }
