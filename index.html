@@ -5,9 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="ucl.ico">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"> <!--ICONOS-->
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.css"> <!--GLIDER-Carousel-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css">
+
+
+    <link rel="stylesheet" href="video-js.css">
+	<script src="video.js"></script>
+
     <title>Uefa Champions League</title>
 </head>
 <body>
@@ -24,11 +32,11 @@
 	        		</ul>
 	        	</nav>
                 
-            <div class="text-box">
+                <div class="text-box">
                     <h1>SEASON 17/18</h1>
                 
 
-                <div class="head-to-head">
+                    <div class="head-to-head">
                         <div class="grid-section">
 
                              <!--  ------------------MATCH1----------------    -->
@@ -149,49 +157,72 @@
                             
                         </div>
                         
-                </div>   
-            </div>  
+                    </div>   
+                 </div>  
 
             </div>
             
-            <section class="container2">
+        <section class="container2">
 
             <div class="container-de-container">
 
                    
-                        <div class="videos-contenedor">
-                            
-                            <div class="contenedor-titulo-controles">
-                                <h2>Watch highlights</h2>
-                            </div>
-                            <div class="contenedor-principal">
-                                <button role="button" class="flecha-izquierda"><i class="fas fa-angle-left"></i></button>
-                                
-                
-                                <div class="contenedor-carousel">
-                                    <div class="carousel">
-                                        <div class="video">
-                                        <img src="img-players/KB9/3.jpg" alt="">
-                                               
-                                        </div>
-                                        <div class="video">
-                                        <img src="img-players/Kylian/3.jpg" alt="">                                            
-                                        </div>
-                                        <div class="video">
-                                        <img src="img-players/Léo/1.jpg" alt="">                                            
-                                        </div>
-                                        <div class="video">
-                                        <img src="img-players/Ney/1.jpg" alt="">                                            
-                                        </div>
-                                    </div>
-                                </div>
-                
-                
-                                <button role="button" class="flecha-derecha"><i class="fas fa-angle-right"></i></button>
-                            </div>
+                <div class="contenedor">    
+                    <div class="carousel">
+                        <div>
+                            <p>Watch highlights</p>
                         </div>
-
-
+                        <div class="carousel__contenedor">
+                            <button aria-label="Anterior" class="carousel__anterior">
+                                <i class="fas fa-chevron-left"></i>
+                            </button>
+            
+                            <div class="carousel__lista">
+                                <div class="carousel__elemento" id="vid">
+                                    <video class="fm-video video-js vjs-16-9 vjs-big-play-centered Karim" data-setup="{}" controls id="fm-video" preload="none">
+                                        <source src="highlights/KB9.mp4" type="video/mp4">
+                                    </video>
+                                    <p>Karim</p>
+                                </div>
+                                <div class="carousel__elemento" id="vid">
+                                    <video class="fm-video video-js vjs-16-9 vjs-big-play-centered Leo" data-setup="{}" controls id="fm-video" preload="none">
+                                        <source src="highlights/Léo.mp4" type="video/mp4">
+                                       </video>
+                                    <p>Léo Messi</p>
+                                </div>
+                                <div class="carousel__elemento" id="vid">
+                                    <video class="fm-video video-js vjs-16-9 vjs-big-play-centered Kylian" data-setup="{}" controls id="fm-video" preload="none">
+                                        <source src="highlights/KM-barce.mp4" type="video/mp4">
+                                   </video>
+                                    <p>Kylian Mbappé</p>
+                                </div>
+                                <div class="carousel__elemento" id="vid">
+                                    <video class="fm-video video-js vjs-16-9 vjs-big-play-centered Ney" data-setup="{}" controls id="fm-video" preload="none">
+                                        <source src="highlights/Ney.mp4" type="video/mp4">
+                                   </video>
+                                    <p>Neymar</p>
+                                </div>
+                                <div class="carousel__elemento" id="vid">
+                                    <video class="fm-video video-js vjs-16-9 vjs-big-play-centered Cris" data-setup="{}" controls id="fm-video" preload="none">
+                                        <source src="highlights/cr7-13-14.mp4" type="video/mp4">
+                                   </video>
+                                    <p>Cristiano</p>
+                                </div>
+                                
+                            </div>
+            
+                            <button aria-label="Siguiente" class="carousel__siguiente">
+                                <i class="fas fa-chevron-right"></i>
+                            </button>
+                        </div>
+            
+                        <div role="tablist" class="carousel__indicadores"></div>
+                    </div>
+                </div>                          
+                
+                                
+                         
+                                
                 <div class="campeones">
                     <div class="grid-section2">
                         <div class="grid2">
@@ -224,6 +255,13 @@
                                 <p>Bayern M.</p>                                
                             </div> 
                         </div>
+                        
+                        <div class="grid2">
+                            <div class="grid-png">
+                                <img src="clubs/Barcelona.png" class="escudo">
+                                <p>Barcelona</p>                                
+                            </div> 
+                        </div>
 
                         <div class="grid2">
                             <div class="t1">
@@ -246,6 +284,12 @@
                         <div class="grid2">
                             <div class="t4">
                                 <p>6</p>
+                                <img src="svg-logo/trophy.svg">
+                            </div>
+                        </div>
+                        <div class="grid2">
+                            <div class="t5">
+                                <p>5</p>
                                 <img src="svg-logo/trophy.svg">
                             </div>
                         </div>
@@ -291,7 +335,7 @@
     
                             <div class="grid3">
                                 <div class="t1">
-                                    <p>140</p>
+                                    <p>141</p>
                                 </div>
                             </div>
                             <div class="grid3">
@@ -301,17 +345,17 @@
                             </div>
                             <div class="grid3">
                                 <div class="t3">
-                                    <p>81</p>
+                                    <p>82</p>
                                 </div>
                             </div>
                             <div class="grid3">
                                 <div class="t4">
-                                    <p>75</p>
+                                    <p>76</p>
                                 </div>
                             </div>
                     </div>
             
-            </section>
+        </section>
 
 
 
@@ -331,23 +375,32 @@
                         </p>
                     </div>
                 
-
+                    <div class="app-bar">
+                        <div class="app-links">
+                            <a href="http://appstore.com/ucl"><img src="appstore.png" alt=""></a>
+                            <a href="https://play.google.com/store/apps/details?id=com.uefa.ucl"><img src="googleplay.png" alt=""></a>
+                        </div>
+                    </div>
 
 
                     <div class="side-bar">                            
                         <div class="social-links">
                             <p>Follow us on</p>
-                            <img src="svg-logo/tw-logo.svg">
-                            <img src="svg-logo/fb-logo.svg">
-                            <img src="svg-logo/ig-logo.svg">
-                            <img src="svg-logo/youtube-logo.svg">
+                            <a href="https://twitter.com/championsleague"><img src="svg-logo/tw-logo.svg"></a>
+                            <a href="https://www.facebook.com/championsleague"><img src="svg-logo/fb-logo.svg"></a>
+                            <a href="https://www.instagram.com/championsleague/"><img src="svg-logo/ig-logo.svg"></a>
+                            <a href="http://www.youtube.com/uefatv"><img src="svg-logo/youtube-logo.svg"></a>
                         </div>        
                     </div>
                 </div>
             </footer>
-
+        
             
 
+            <script src="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.js"></script>
+            <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+            <script src="app.js"></script>
+            <!--https://nickpiscitelli.github.io/Glider.js/     PAGINA de la LIBRERIA-->
       
 
 </body>
