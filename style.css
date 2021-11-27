@@ -61,6 +61,7 @@ nav ul li a{
 	color: #fff;
 	text-decoration: none;
 	position: relative;
+    font-size: 1.4em;
 }
 
 
@@ -105,7 +106,7 @@ nav ul li a{
 .grid {
 	overflow: hidden;
 	position: relative;   
-    border: 2px solid var(--verde);  
+    outline: 2px solid var(--verde);  
     cursor: pointer; 
 
 }
@@ -263,8 +264,8 @@ nav ul li a{
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 100%;
-    padding: 0 1.87em;
+    min-height: 100%;
+    padding: 0px 1.87em;
     color: var(--verde);
     cursor: pointer;    
     -webkit-transition: all 1s ease;
@@ -293,14 +294,14 @@ nav ul li a{
 
 .container2 {
     width: 100%;
-    height: 2280px;
+    min-height: 2080px;
     background-image: url(img-players/background.jpg);
     background-size: cover;
     background-position: center;
     display: flex;
     justify-content: center;
     position: relative;
-
+    padding: 30px 0px;
 }
 
 
@@ -309,91 +310,109 @@ nav ul li a{
     width: 75%;
     height: 100%;
     flex-direction: column;
+    padding: 100px 0px 0px 0px;
 }
 
 
-.container-de-container .videos-contenedor, .campeones, .goleadores{
+.container-de-container, .campeones, .goleadores{
     display: flex;    
-    width: 90%;
+    max-width: 90%;
     color: #fff;
 }
 
-.videos-contenedor {
-    flex-direction: column;
-    font-size: 1.4rem;
-    padding: 35px 15px;
-}
 
 
-.videos-contenedor .contenedor-principal .flecha-izquierda, /*---------------Flechas--------------------*/
-.videos-contenedor .contenedor-principal .flecha-derecha{
-	position: absolute;
-	border: none;
-	background: rgba(0, 0, 0, 0);
-	font-size: 35px;
-	height: 50%;
-	top: calc(50%-33%);	/*50% del tamaño del contenedor -25% que es el alto del botón*/
-	line-height: 40px;
-	width: 50px;
-	color: var(--verde);
-	cursor: pointer;
-	z-index: 500;
-}
 
-/*---------------Flechas--------------------*/
 
-.videos-contenedor .contenedor-principal .flecha-izquierda{ 
-	left: -50px;
-}
-.videos-contenedor .contenedor-principal .flecha-derecha{
-	right: -50px;
-}
 
 /*------------------------------------------- CAROUSEL ----------------------------------------------------*/
 
-.videos-contenedor .contenedor-principal {
-	display: flex;
-	align-items: center;
-    position: relative;
-    margin-top: 5%;
-    width: 100%;
-    height: 300px;
+.contenedor {
+    max-width: 1200px;
+	width: 100%;
+	margin:auto;
 }
 
-.videos-contenedor{
-    margin-top: 40px;
-    height: 220px;
-    
+.carousel p{
+    font-size: 2em;
+    font-family: 'Champions-Regular';
+    font-weight: bold;
+    padding: 2% ;
 }
-.videos-contenedor .contenedor-carousel {
-	width: 100%;	
-	scroll-behavior: smooth;
-    overflow: hidden;
-}
-
-.videos-contenedor .contenedor-carousel .carousel{
-	display: flex;
-	flex-wrap: nowrap;
-    
+.carousel__contenedor {
+	position: relative; 
 }
 
-.videos-contenedor .contenedor-carousel .carousel .video{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-	min-width: 33%;
-	transition: .3s ease all;
-	box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
-    
+.carousel__elemento{
+    padding: 0px 10px;
 }
 
 
-.videos-contenedor .contenedor-carousel .carousel .video img{
-	width: 98%;
-	vertical-align: top;
-	height: 100%;
+.carousel__anterior,
+.carousel__siguiente {
+	position: absolute;
+	display: block;
+	width: 30px;
+	height: 30px;
+	border: none;
+	top: calc(50% - 35px);
+	cursor: pointer;
+	line-height: 30px;
+	text-align: center;
+    background: none;
+	color: var(--verde);
+	opacity: 40%;
+}
+.carousel__anterior:hover,
+.carousel__siguiente:hover {
+	opacity: 100%;
 }
 
+.carousel__anterior {
+	left: -30px;
+}
+
+.carousel__siguiente {
+	right: -30px;
+}
+.carousel__lista {
+	overflow: hidden;
+}
+.carousel__elemento {
+	text-align: center;
+}
+
+.carousel__indicadores .glider-dot {
+	display: block;
+	width: 30px;
+	height: 4px;
+	background: #fff;
+	opacity: .2;
+	border-radius: 0;
+}
+.carousel__indicadores .glider-dot:hover {
+	opacity: .5;
+}
+
+.carousel__indicadores .glider-dot.active {
+	opacity: 1;
+}
+
+.Karim{
+    background: transparent url('img-players/KB9/1.jpeg') 50% 50% / cover no-repeat;
+}
+ .Leo{
+    background: transparent url('img-players/Léo/1.jpg') 50% 50% / cover no-repeat;
+}
+ .Kylian{
+    background: transparent url('img-players/Kylian/3.jpg') 50% 50% / cover no-repeat;
+}
+ .Ney{
+    background: transparent url('img-players/Ney/1.jpg') 50% 50% / cover no-repeat;
+}
+.Cris{
+    background: transparent url('img-players/CR7/21.jpg') 50% 50% / cover no-repeat;
+}
 
 
 
@@ -401,7 +420,7 @@ nav ul li a{
 
 
 .campeones{
-    height: 700px;
+    height: 1000px;
     margin-top: 180px;
     font-family: "Champions-Regular";
     font-size: 1.4rem;
@@ -417,7 +436,7 @@ nav ul li a{
     display: grid;
     width: 100%;
     height: 100%;
-    grid-template-rows: repeat(5, 18%);
+    grid-template-rows: repeat(6, 15%);
     grid-template-columns: 100%;
     grid-gap: 15px;  
     padding: 15px; 
@@ -442,36 +461,44 @@ nav ul li a{
         border-bottom: 1px solid rgba(0, 0, 0, .22);  
     }
     .grid2:nth-child(2){
-        grid-row:2/3;
+        grid-row:2/3;           /*REAL*/
         grid-column: 1/1;
     }
     .grid2:nth-child(3){
-        grid-row:3/4;
+        grid-row:3/4;            /*MILAN*/
         grid-column: 1/1;
     }
     .grid2:nth-child(4){
-        grid-row:4/5;
+        grid-row:4/5;           /*LIVERPOOL*/
         grid-column: 1/1;
     }
 
     .grid2:nth-child(5){
-        grid-row:5/6;
+        grid-row:5/6;           /*BAYERN*/
         grid-column: 1/1;
     }
     .grid2:nth-child(6){
-        grid-row:2/3;
+        grid-row:6/7;           /*BARCELOMA*/
         grid-column: 1/1;
     }
     .grid2:nth-child(7){
-        grid-row:3/4;
+        grid-row:2/3;           /*13*/
         grid-column: 1/1;
     }
     .grid2:nth-child(8){
-        grid-row:4/5;
+        grid-row:3/4;           /*7*/
         grid-column: 1/1;
     }
     .grid2:nth-child(9){
-        grid-row:5/6;
+        grid-row:4/5;           /*6*/
+        grid-column: 1/1;
+    }
+    .grid2:nth-child(10){
+        grid-row:5/6;            /*6*/
+        grid-column: 1/1;
+    }
+    .grid2:nth-child(11){
+        grid-row:6/7;            /*5*/
         grid-column: 1/1;
     }
 
@@ -481,7 +508,7 @@ nav ul li a{
         display: flex;
         align-items: center;
     }
-    .grid2 .t1, .t2, .t3, .t4 {
+    .grid2 .t1, .t2, .t3, .t4, .t5 {
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -607,6 +634,7 @@ footer .container4{
     align-items: center;
     flex-direction: column;
     justify-content: center;
+ 
 }
 
 
@@ -623,27 +651,55 @@ footer .container4{
     position: relative;
     margin-top: 5%;
 }
-.container4  img {
+.container4 img {
     position: relative;
     max-width: 25%;
     max-height: 35%;
+    padding: 10px 0px 0px 0px;
+}
+
+.app-bar{
+    width: 20%;
+    height: 80px;
+    position: absolute;
+    right: 10px;
+    bottom: 25%;
+}
+.app-links a{
+    max-width: 50%;
+    min-height: 40px;
+}
+.app-links a img{
+    cursor: pointer;
+    min-width: 100%;
+    min-height: 40px;
+    padding: 0px 3px;
+}
+.app-links {
+    display: flex;
+    flex-direction: row;  
+	position: absolute;
 }
 
 .side-bar{
 	width: 20%;
-	height: 30px;
+	height: 40px;
 	position: absolute;
     left: 10px;
     top: 35%;
+}
+.social-links a{
+        max-width: 50%;
+        min-height: 100%;
 }
 
 .social-links img{
 	margin: 5px;
 	cursor: pointer;
-    width: 32px;
-    height: 32px;
+    min-width: 32px;
+    min-height: 32px;
 }
-.social-links{
+.social-links {
     display: flex;
     flex-direction: row;    
 	color: #fff;
@@ -684,9 +740,8 @@ footer .container4{
     }
 
     .grid-section{
-        grid-template-rows: repeat(3, 29%);
+        grid-template-rows: repeat(3, 33%);
         grid-template-columns: repeat(2, 1fr);
-        grid-auto-rows: 10%;
         grid-gap: 15px;  
         padding: 15px;   
         border-bottom: none;       
@@ -724,11 +779,7 @@ footer .container4{
 
     /*-------------BUTTON MORE---------------*/
     .grid:nth-child(19){
-        grid-row: 4/5;
-        grid-column: 1/3;
-        width: 50%;
-        height: 70%;
-        margin-left: 25%;
+        display: none;
     }
 
     .container2{
@@ -763,10 +814,11 @@ footer .container4{
     .grid2 .t1, 
     .grid2 .t2,
     .grid2 .t3,
-    .grid2 .t4{
+    .grid2 .t4,
+    .grid2 .t5{
         margin-left: 80%;
     }
-    .grid2 .t1 img, .grid2 .t2 img, .grid2 .t3 img, .grid2 .t4 img{
+    .grid2 .t1 img, .grid2 .t2 img, .grid2 .t3 img, .grid2 .t4 img, .grid2 .t5 img{
         padding-left:10px;
     }
 
@@ -782,15 +834,22 @@ footer .container4{
     }
 
     /*-----------------  FOOTER  ------------------------*/
-    .container4{
-        padding:3% 0px;
-    }
+
     .side-bar{    
         top: 80%;
-        margin-left: 35%;
-        
+        margin-left: 35%;        
     }
-
+    .app-bar{    
+        top: 87%;
+        width: 100%;     
+    }
+    .app-links{
+        flex-direction: column;
+        margin-left: 45%;
+    }
+    .app-links a {
+        min-width: 100%;        
+    }
 }
 
 
@@ -812,9 +871,8 @@ footer .container4{
         top: 12%;
     }
     .grid-section{
-        grid-template-rows: repeat(6, 15%);
+        grid-template-rows: repeat(6, 15.8%);
         grid-template-columns: repeat(1, 1fr);
-        grid-auto-rows: 10%;
         grid-gap: 15px;  
         padding: 15px;        
     }
@@ -857,20 +915,24 @@ footer .container4{
 	    grid-row:6/7;
         grid-column: 1/2;
     }
-    /*-------------BUTTON MORE---------------*/
-    .grid:nth-child(19){
-        grid-row: 7/8;
-        grid-column: 1/2;
-        width: 50%;
-        height: 40%;
-    }
-    .side-bar{
-     margin-left: 25%;        
-    }
-	.videos-contenedor .contenedor-carousel .carousel .video{
+  
+    .videos-contenedor .contenedor-carousel .carousel .video{
         min-width: 100%;
 }
     .videos-contenedor .contenedor-carousel .carousel .video img{
         height: 100%;
+    }
+
+
+    .side-bar{    
+        top: 80%;
+        margin-left: 26%;        
+    }
+    .app-links {
+        flex-direction: column;
+        margin-left: 35%;
+    }
+    .app-links a {
+        min-width: 100%;        
     }
 }
