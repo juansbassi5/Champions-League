@@ -343,6 +343,7 @@ nav ul li a{
     font-size: 1.4em;
     font-family: 'Champions-Regular';
     padding: 2% ;
+    font-weight: normal;
 }
 .carousel__contenedor {
 	position: relative; 
