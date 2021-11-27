@@ -339,7 +339,7 @@ nav ul li a{
     font-weight: bold;
     padding: 2% ;
 }
-.carousel p{
+.carousel .carousel__contenedor .carousel__lista .carousel__elemento p{
     font-size: 1.4em;
     font-family: 'Champions-Regular';
     padding: 2% ;
