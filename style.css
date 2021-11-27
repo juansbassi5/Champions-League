@@ -333,10 +333,15 @@ nav ul li a{
 	margin:auto;
 }
 
+.carousel h1{
+    font-size: 2em;
+    font-family: 'Champions-Regular';
+    font-weight: bold;
+    padding: 2% ;
+}
 .carousel p{
     font-size: 1.4em;
     font-family: 'Champions-Regular';
-    font-weight: bold;
     padding: 2% ;
 }
 .carousel__contenedor {
